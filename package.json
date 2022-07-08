@@ -1,0 +1,25 @@
+{
+  "name": "part2",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "16.15.1",
+    "npm": "8.13.1"
+  },
+  "scripts": {
+    "start": "node ./bin/www",
+    "heroku-postbuild": "cd reactapp && npm install && npm run build"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "crypto-js": "^4.0.0",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "mongoose": "^5.9.13",
+    "morgan": "~1.9.1",
+    "sync-request": "^6.1.0",
+    "uid2": "0.0.3"
+  }
+}
