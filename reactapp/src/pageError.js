@@ -3,7 +3,7 @@ import React from "react";
 function pageError() {
   return (
     <div>
-      <h1>page introuvable</h1>
+      <h1>Page introuvable</h1>
     </div>
   );
 }

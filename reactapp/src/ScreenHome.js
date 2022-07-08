@@ -90,7 +90,7 @@ function ScreenHome() {
   return (
     <div className="Login-page">
       <Row style={{ justifyContent: "center" }}>
-        <Col style={{ margin: "40px" }}>
+        <Col style={{ margin: "38px" }}>
           <div className="Sign">
             <h1 style={{ color: "white" }}>MorningNews</h1>
             <Button
@@ -108,7 +108,7 @@ function ScreenHome() {
       </Row>
       {/* SIGN-IN */}
       <Row style={{ justifyContent: "center", alignItems: "center" }}>
-        <Col style={{ margin: "40px" }}>
+        <Col>
           <Form>
             <div className="Sign">
               {errorSignIn1}
@@ -141,7 +141,7 @@ function ScreenHome() {
           </Form>
         </Col>
         {/* SIGN-UP */}
-        <Col style={{ margin: "40px" }}>
+        <Col style={{ margin: "35px" }}>
           <Form>
             <div className="Sign">
               {errorSignUp1}
