@@ -39,7 +39,7 @@ function ScreenHome() {
   };
 
   //============================function sign-in=====================================================================
-
+  // eslint-disable-next-line
   const handleSignIn = async () => {
     let responseBackend = await fetch("users/sign-in", {
       method: "post",
@@ -58,15 +58,16 @@ function ScreenHome() {
     }
   };
   //=================================function sign-up===============================================================
-  var handleSubmitSignUp = async () => {
-    var recordUser = await fetch(`/users/sign-up`, {
+  // eslint-disable-next-line
+  const handleSubmitSignUp = async () => {
+    let recordUser = await fetch(`/users/sign-up`, {
       method: "post",
       headers: { "content-type": "application/x-www-form-urlencoded" },
       body: `name=${signUpUsername}&email=${signUpEmail}&password=${signUpPassword}`,
     });
-    var recordUserJson = await recordUser.json();
+    let recordUserJson = await recordUser.json();
 
-    var response = recordUserJson.result;
+    let response = recordUserJson.result;
 
     if (response === true) {
       setErrorSignUp([]);
