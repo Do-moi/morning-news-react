@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import { Menu, Button } from "antd";
+import { Button } from "antd";
 import { HomeOutlined, ReadOutlined, LogoutOutlined } from "@ant-design/icons";
 
 import { useDispatch } from "react-redux";

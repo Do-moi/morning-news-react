@@ -4,7 +4,7 @@ import { Input, Button, Col, Row, Form } from "antd";
 import { useDispatch } from "react-redux";
 import { addToken } from "./appRedux/reducers/tokenSlice";
 import { useNavigate } from "react-router-dom";
-
+import { useMediaQuery } from "react-responsive";
 function ScreenHome() {
   const [emailSignIn, setEmailSignIn] = useState("");
   const [passwordSignIn, setPasswordSignIn] = useState("");
@@ -15,7 +15,7 @@ function ScreenHome() {
   const [errorSignUp, setErrorSignUp] = useState([]);
   let navigate = useNavigate();
   const dispatch = useDispatch();
-
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 576px)" });
   //============================function sign-in=====================================================================
 
   const handleSignInDemo = async () => {
@@ -87,8 +87,9 @@ function ScreenHome() {
       {error}
     </p>
   ));
+
   return (
-    <div className="Login-page">
+    <div className={isTabletOrMobile ? "Login-page-mobile" : "Login-page"}>
       <Row style={{ justifyContent: "center" }}>
         <Col style={{ margin: "38px" }}>
           <div className="Sign">
@@ -141,7 +142,7 @@ function ScreenHome() {
           </Form>
         </Col>
         {/* SIGN-UP */}
-        <Col style={{ margin: "35px" }}>
+        <Col style={{ margin: "45px" }}>
           <Form>
             <div className="Sign">
               {errorSignUp1}
